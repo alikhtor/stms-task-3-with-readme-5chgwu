@@ -23,6 +23,11 @@ const routes: Routes = [
       import("./features/settings/settings.module").then(m => m.SettingsModule)
   },
   {
+    path: "follow-list",
+    loadChildren: () =>
+      import("./features/follow-list/follow-list.module").then(m => m.FollowListModule)
+  },
+  {
     path: "**",
     redirectTo: "patients"
   }

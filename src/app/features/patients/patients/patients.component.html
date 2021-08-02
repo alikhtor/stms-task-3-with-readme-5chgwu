@@ -1,13 +1,48 @@
 <div class="container">
   <div rtl>
+
     <h1 class="main-heading">{{ 'stms.patients.title' | translate }}</h1>
+
     <div class="actions">
-      <a mat-raised-button class="actions-main" color="primary" routerLink="../settings">
+      <a mat-raised-button class="actions-main" color="primary" (click)="onFetchPatients()">
         {{ 'stms.patients.get-patients' | translate }}
       </a>
-      <!--
-        Endpoint to fetch data: https://api.mocki.io/v2/51597ef3
-       -->
+    </div>
+
+    <div class="patients-list">
+
+      <mat-card *ngFor="let patient of patients$ | async">
+
+        <mat-card-title>
+          <code>
+            {{patient?.code}}
+          </code>
+          {{patient?.fullName}}
+        </mat-card-title>
+
+        <mat-card-subtitle>
+          {{patient?.age}}
+        </mat-card-subtitle>
+
+        <mat-card-actions>
+          <div class="add-to-favorite-block">
+            <a>
+              <button [disabled]="patient?.isInFollowedList" mat-raised-button color="primary" (click)="onAddToFollowList(patient)">
+                <ng-container *ngIf="!patient?.isInFollowedList; else itemIsInFollowList">
+                  <fa-icon icon="plus"></fa-icon>
+                  <span>{{ 'stms.buttons.add-to-followed-list' | translate }}</span>
+                </ng-container>
+                <ng-template #itemIsInFollowList>
+                  <fa-icon icon="check"></fa-icon>
+                  <span>{{ 'stms.buttons.is-add-to-followed-list' | translate }}</span>
+                </ng-template>
+              </button>
+            </a>
+          </div>
+        </mat-card-actions>
+
+      </mat-card>
+
     </div>
   </div>
 </div>

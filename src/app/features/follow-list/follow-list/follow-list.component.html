@@ -1,0 +1,62 @@
+<div class="container">
+    <div rtl>
+        <h1 class="main-heading">{{ 'stms.follow-list.title' | translate }}</h1>
+
+        <div class="list-of-followed">
+
+            <mat-card *ngFor="let order of orders$ | async">
+
+                <mat-card-title>
+                    <code>
+                        {{order?.orderNum}}
+                    </code>
+                    {{order?.orderName}}
+                </mat-card-title>
+
+                <mat-card-subtitle>
+                    {{order?.physician?.name}}
+                </mat-card-subtitle>
+
+                <mat-card-actions>
+                    <div class="add-to-favorite-block">
+                        <a>
+                            <button mat-raised-button color="primary" (click)="removeItem(order, 'o')">
+                                <fa-icon icon="check"></fa-icon>
+                                <span>{{ 'stms.buttons.remove-from-followed-list' | translate }}</span>
+                            </button>
+                        </a>
+                    </div>
+                </mat-card-actions>
+
+            </mat-card>
+
+            <mat-card *ngFor="let patient of patients$ | async">
+
+                <mat-card-title>
+                    <code>
+                        {{patient?.code}}
+                    </code>
+                    {{patient?.fullName}}
+                </mat-card-title>
+
+                <mat-card-subtitle>
+                    {{patient?.age}}
+                </mat-card-subtitle>
+
+                <mat-card-actions>
+                    <div class="add-to-favorite-block">
+                        <a>
+                            <button mat-raised-button color="primary" (click)="removeItem(patient, 'p')">
+                                <fa-icon icon="check"></fa-icon>
+                                <span>{{ 'stms.buttons.remove-from-followed-list' | translate }}</span>
+                            </button>
+                        </a>
+                    </div>
+                </mat-card-actions>
+
+            </mat-card>
+
+        </div>
+
+    </div>
+</div>

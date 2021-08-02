@@ -8,6 +8,7 @@
   "stms.menu.login": "Sign in",
   "stms.menu.logout": "Logout",
   "stms.menu.settings": "Settings",
+  "stms.menu.follow-list": "Follow List",
 
   "stms.settings.animations.elements": "Navigation page elements slide up",
   "stms.settings.animations.page": "Navigation whole page transition",
@@ -30,5 +31,11 @@
   "stms.patients.get-patients": "Get patients",
 
   "stms.orders.title": "Orders",
-  "stms.orders.get-orders": "Get orders"
+  "stms.orders.get-orders": "Get orders",
+
+  "stms.follow-list.title": "Follow list",
+
+  "stms.buttons.add-to-followed-list": "add to follow list",
+  "stms.buttons.is-add-to-followed-list": "is in followed list",
+  "stms.buttons.remove-from-followed-list": "remove from followed list"
 }

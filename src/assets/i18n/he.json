@@ -8,6 +8,7 @@
   "stms.menu.login": "התחברות",
   "stms.menu.logout": "התנתקות",
   "stms.menu.settings": "הגדרות",
+  "stms.menu.follow-list": "Follow List",
 
   "stms.settings.animations.elements": "בזמן ניווט אלמנטים זיזים כלפי מעלה",
   "stms.settings.animations.page": "טרנזיציה מלאה בניוט לדף",
@@ -30,5 +31,8 @@
   "stms.patients.get-patients": "מצא נבדקים",
 
   "stms.orders.title": "הזמנות",
-  "stms.orders.get-orders": "מצא הזמנות"
+  "stms.orders.get-orders": "מצא הזמנות",
+  "stms.orders.buttons.add-to-followed-list": "add to follow list",
+  "stms.orders.buttons.is-add-to-followed-list": "is in followed list",
+  "stms.buttons.remove-from-followed-list": "remove from followed list"
 }

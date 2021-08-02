@@ -33,6 +33,7 @@ export class AppRootComponent implements OnInit {
   year = new Date().getFullYear();
   languages = ["en", "he"];
   navItems = [
+    { link: "follow-list", label: "stms.menu.follow-list" },
     { link: "patients", label: "stms.menu.patients" },
     { link: "orders", label: "stms.menu.orders" }
   ];
